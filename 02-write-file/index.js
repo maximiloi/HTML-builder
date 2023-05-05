@@ -9,6 +9,21 @@ const rl = readline.createInterface({
 
 const filename = path.join(__dirname, 'output.txt');
 
+fs.readdir(__dirname, (err, files) => {
+  if (err) {
+    console.log(err);
+    return;
+  }
+  if (files.includes('output.txt')) {
+    fs.writeFile(filename, '', (err) => {
+      if (err) {
+        console.log(err);
+        return;
+      }
+    })
+  }
+});
+
 rl.on('SIGINT', () => {
   goodbyeMessage();
 });
