@@ -20,7 +20,7 @@ fs.readdir(__dirname, (err, files) => {
         console.log(err);
         return;
       }
-    })
+    });
   }
 });
 
@@ -44,6 +44,6 @@ const getInput = () => {
 const goodbyeMessage = () => {
   console.log('Goodbye!');
   rl.close();
-}
+};
 
 getInput();

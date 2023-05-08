@@ -31,6 +31,6 @@ function copyDir() {
       fs.copyFile(sourceFilePath, copyFilePath, (err) => {
         if (err) throw err;
       });
-    })
+    });
   });
 }
